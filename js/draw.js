@@ -21,8 +21,8 @@ $(window).resize(function(){
       data.frequency,       //frequency
       data.spacing.x,       //xSpacing
       data.spacing.y,       //ySpacing
-      data.x_offset,        //shiftX
-      data.y_offset,        //shiftWave
+      data.x_shift,        //shiftX
+      data.wave_shift,        //shiftWave
       data.color            //color
     );
   });

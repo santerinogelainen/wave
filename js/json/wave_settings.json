@@ -16,8 +16,8 @@
     30,
     1
   ],
-  "x_offset": 6,
-  "y_offset": 0,
+  "x_shift": 6,
+  "wave_shift": 0,
   "full_offset": {
     "x": 0,
     "y": 0
