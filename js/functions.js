@@ -12,6 +12,7 @@ function getY(x, f, h, s, o) {
   h = (typeof h !== 'undefined') ? h : 10;
   o = (typeof o !== 'undefined') ? o : 10;
   s = (typeof s !== 'undefined') ? s : 0;
+  //console.log(s);
   //calculate y
   calc = h * Math.cos(f * x + s) + o;
   return calc;
@@ -31,6 +32,8 @@ function getY(x, f, h, s, o) {
 //  param shiftWave === int, shift the whole wave
 //  param color === ARRAY!!, hsla color values in order. color of the wave (0 => hue, 1 => saturation, 2 => lightness, 3 => alpha)
 function draw(numOfWaves, xOffset, yOffset, waveLength, waveHeight, circleSize, frequency, xSpacing, ySpacing, shiftX, shiftWave, color) {
+  //wave shift start
+  var shift = 0;
   //create waves
   while (numOfWaves > 0) {
   //set starting point
@@ -42,13 +45,14 @@ function draw(numOfWaves, xOffset, yOffset, waveLength, waveHeight, circleSize, 
     ctx.beginPath();
     //to do \/ make arc great again (add more config possibilities)
     ctx.arc(x, y, circleSize, 0, 2 * Math.PI);
-    ctx.fillStyle = "hsla(" + color[0] + ", " + color[1] + "%, " + (color[2] + 1.3 * getY(x, frequency, waveHeight, shiftWave)) + "%, " + color[3] + ")";
+    ctx.fillStyle = "hsla(" + color[0] + ", " + color[1] + "%, " + (color[2] + 1.3 * getY(x, frequency, waveHeight, shift)) + "%, " + color[3] + ")";
     ctx.fill();
-    y = getY(x, frequency, waveHeight, shiftWave, yOffset);
-    console.log("x = " +  x + "; y = " + getY(x, frequency, waveHeight, shiftWave, yOffset));
+    y = getY(x, frequency, waveHeight, shift, yOffset);
+    console.log("x = " +  x + "; y = " + getY(x, frequency, waveHeight, shift, yOffset));
     ctx.closePath();
     x += xSpacing;
     }
+  shift += shiftWave;
   yOffset += ySpacing;
   xOffset -= shiftX;
   numOfWaves--;

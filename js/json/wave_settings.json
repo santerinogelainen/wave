@@ -1,5 +1,5 @@
 {
-  "circle_size": 5,
+  "circle_size": 3,
   "amount": {
     "x": 2000,
     "y": 60
@@ -7,19 +7,19 @@
   "height": 10,
   "frequency": 0.02,
   "spacing": {
-    "x": 20,
-    "y": 15
+    "x": 10,
+    "y": 10
   },
   "color": [
-    100,
+    190,
     100,
     30,
     1
   ],
-  "x_shift": 6,
-  "wave_shift": 0,
+  "x_shift": 5,
+  "wave_shift": 50,
   "full_offset": {
-    "x": 0,
+    "x": -30,
     "y": 0
   }
 }
