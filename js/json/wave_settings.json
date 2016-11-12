@@ -1,0 +1,25 @@
+{
+  "circle_size": 5,
+  "amount": {
+    "x": 2000,
+    "y": 60
+  },
+  "height": 10,
+  "frequency": 0.02,
+  "spacing": {
+    "x": 20,
+    "y": 15
+  },
+  "color": [
+    100,
+    100,
+    50,
+    1
+  ],
+  "x_offset": 6,
+  "y_offset": 0,
+  "full_offset": {
+    "x": 0,
+    "y": 0
+  }
+}

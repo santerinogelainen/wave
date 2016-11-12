@@ -5,12 +5,13 @@
 //    param o === number (int, float, or double), offset waves from top
 
 
-function getY(x, f, h, o) {
+function getY(x, f, h, s, o) {
   //default parameters
   f = (typeof f !== 'undefined') ? f : 0.2;
   h = (typeof h !== 'undefined') ? h : 10;
   o = (typeof o !== 'undefined') ? o : 10;
+  s = (typeof s !== 'undefined') ? s : 0;
   //calculate y
-  calc = h * Math.cos(f * x) + h;
+  calc = h * Math.cos(f * x + s) + o;
   return calc;
 }
